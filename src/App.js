@@ -1,11 +1,11 @@
 import React from "react";
-import MenuTop from "./MenuTop";
+import Articles from "./Articles";
 
 function App() {
 
     return (
         <div className="App">
-            <MenuTop/>
+            <Articles/>
         </div>
     );
 }
