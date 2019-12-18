@@ -14,7 +14,7 @@ function Articles() {
 
   const getArticleData = (articleIds, start) => {
     let template = [];
-    const articleRange = articleIds.slice(start, start + 30);
+    const articleRange = articleIds.slice(start, start + 50);
     const articleCalls = articleRange.map(articleId =>
       axios
         .get(`${baseUrl}/item/${articleId}.json`, config)
@@ -35,32 +35,6 @@ function Articles() {
     );
 
     console.log(template);
-    // urlMetadata(`${proxyUrl}${url}`);
-
-    // const metadataCalls = res.map(articleRes => {
-    //     const {title, url} = articleRes.data;
-    //     template.push({title});
-    //     return urlMetadata(`${proxyUrl}${url}`);
-    // });
-    // Promise.all(metadataCalls).then(values => {
-    //     values.map((metadataObj, index) => {
-    //         template[index].image = metadataObj["og:image"];
-    //     });
-    //     console.log(template);
-    //     setTemplateArray(template);
-    // });
-    // const metadataCalls = res.map(articleRes => {
-    //     const {title, url} = articleRes.data;
-    //     template.push({title});
-    //     return urlMetadata(`${proxyUrl}${url}`);
-    // });
-    // Promise.all(metadataCalls).then(values => {
-    //     values.map((metadataObj, index) => {
-    //         template[index].image = metadataObj["og:image"];
-    //     });
-    //     console.log(template);
-    //     setTemplateArray(template);
-    // });
   };
 
   useEffect(() => {
@@ -76,7 +50,7 @@ function Articles() {
           templateArray.map(
             articleItem =>
               articleItem.imageUrl && (
-                <div>
+                <div eachArticle>
                   <h2> {articleItem.title}</h2>
                   <Img src={articleItem.imageUrl} />
                 </div>

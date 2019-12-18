@@ -1,7 +1,7 @@
 import React from "react";
-import styled from "styled-components";
+import styled, {withTheme} from "styled-components";
 
-export const Header = styled.div`
+export const Header = styled.div `
 @media (max-width: 768px) {
 	
   display: flex;
@@ -47,7 +47,7 @@ export const Header = styled.div`
 	}
 `;
 
-export const Body = styled.div`
+export const Body = styled.div `
   width: 100%;
   max-width: 1260px;
 	margin:0
@@ -55,12 +55,20 @@ export const Body = styled.div`
   background: #f9f8f6;
 `;
 
-export const Img = styled.img`
+export const Img = styled.img `
   width: 100%;
   margin: 0 auto;
 `;
 
-export const Article = styled.div`
+export const Article = styled.div `
   width: 90%;
-  margin: auto;
+  margin: ${
+    props => props.eachArticle ? "2rem auto" : "0 auto"
+};
+	
+	& > div > div{
+		border: 1px solid red;
+		margin-bottom: 2rem
+	}
+
 `;
