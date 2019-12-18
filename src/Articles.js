@@ -69,19 +69,21 @@ function Articles() {
       .then(res => getArticleData(res.data, 0));
   }, []);
   return (
-    <div Article>
-      {" "}
-      {templateArray &&
-        templateArray.map(
-          articleItem =>
-            articleItem.imageUrl && (
-              <div>
-                <h2> {articleItem.title}</h2>
-                <Img src={articleItem.imageUrl} />
-              </div>
-            )
-        )}
-    </div>
+    <Article>
+      <div>
+        {" "}
+        {templateArray &&
+          templateArray.map(
+            articleItem =>
+              articleItem.imageUrl && (
+                <div>
+                  <h2> {articleItem.title}</h2>
+                  <Img src={articleItem.imageUrl} />
+                </div>
+              )
+          )}
+      </div>
+    </Article>
   );
 }
 export default Articles;

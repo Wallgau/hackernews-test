@@ -5,13 +5,21 @@ export const Header = styled.div`
 @media (max-width: 768px) {
 	
   display: flex;
-  justify-content: space-between;
 	background:white;
 	z-index:15;
 	position:fixed
-	width:100%;
+	
 	top:0;
-	padding: 1.3rem 0;
+	justify-content:space-between;
+	margin: 0;
+	padding: 1.3rem 0
+	margin-left: auto;
+    margin-right: auto;
+    max-width: 1490px;
+    padding-left: 25px;
+    padding-right: 25px;
+    width: 100%;
+		    
 	
   .w {
     border: 1px solid black;
@@ -20,11 +28,11 @@ export const Header = styled.div`
 		padding:0.3rem
 		height:1.5rem;
 		width:1.5rem;
-		text-align:center;
 		font-size: 1.6rem;
 		font-weight:600;
     color: white;
-		margin: 0 5%;
+		margin:0;
+		
 		
   }
 	.hamburger{
@@ -33,17 +41,26 @@ export const Header = styled.div`
 		border-radius: 50%;
 		 color: white;
 		 padding:0.3rem;
-		 margin: 0 10%;
+		 margin-left: 51%;
+		 
 	}
 	}
+`;
+
+export const Body = styled.div`
+  width: 100%;
+  max-width: 1260px;
+	margin:0
+  padding: 0;
+  background: #f9f8f6;
 `;
 
 export const Img = styled.img`
-  width: 90%;
-  margin: 0 1rem;
+  width: 100%;
+  margin: 0 auto;
 `;
 
 export const Article = styled.div`
-  width: 70%;
-  background: grey;
+  width: 90%;
+  margin: auto;
 `;
