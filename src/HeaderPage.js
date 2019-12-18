@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import MenuRoundedIcon from "@material-ui/icons/MenuRounded";
 import CloseIcon from "@material-ui/icons/Close";
+import { Header } from "./styled.js";
 
 function HeaderPage() {
   const [open, setOpen] = useState(false);
@@ -8,7 +9,8 @@ function HeaderPage() {
   useEffect(() => {}, []);
   return (
     <>
-      <div>
+      <Header>
+        <div className="w">W</div>
         {open ? (
           <div>
             <nav>
@@ -37,9 +39,12 @@ function HeaderPage() {
             </nav>
           </div>
         ) : (
-          <MenuRoundedIcon onClick={() => setOpen(!open)} />
+          <MenuRoundedIcon
+            className="hamburger"
+            onClick={() => setOpen(!open)}
+          />
         )}
-      </div>
+      </Header>
     </>
   );
 }
