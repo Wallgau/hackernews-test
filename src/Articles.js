@@ -42,30 +42,33 @@ function Articles() {
         axios.get(`${baseUrl}/topstories.json`).then(res => getArticleData(res.data, 0));
     }, []);
     return (
-        <Article>
-            <div> {" "}
-                {
-                templateArray && templateArray.map(articleItem => articleItem.imageUrl && (
-                    <div eachArticle>
-                        <Img src={
-                            articleItem.imageUrl || "How to"
-                        }/>
-                        <div className="post">
+        <>
 
-                            <span>{
-                                articleItem.siteName
-                            }</span>
-                            <h2> {
-                                articleItem.title
-                            }</h2>
-                            <p></p>
+            <Article>
+
+                <div> {
+                    templateArray && templateArray.map(articleItem => articleItem.imageUrl && (
+                        <div eachArticle>
+                            <Img src={
+                                articleItem.imageUrl || "How to"
+                            }/>
+                            <div className="post">
+
+                                <span>{
+                                    articleItem.siteName
+                                }</span>
+                                <h3> {
+                                    articleItem.title
+                                }</h3>
+                                <p></p>
+                            </div>
+
+
                         </div>
-
-
-                    </div>
-                ))
-            } </div>
-        </Article>
+                    ))
+                } </div>
+            </Article>
+        </>
     );
 }
 export default Articles;

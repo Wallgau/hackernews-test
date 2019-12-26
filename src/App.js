@@ -1,17 +1,22 @@
 import React from "react";
 import Articles from "./Articles";
 import HeaderPage from "./HeaderPage";
-import { Body } from "./styled";
+import Top from "./Top";
+import {Body} from "./styled";
+import "./App.css"
 
 function App() {
-  return (
-    <Body>
-      <div>
-        <HeaderPage />
-        <Articles />
-      </div>
-    </Body>
-  );
+    return (
+        <>
+            <HeaderPage/>
+            <Top/>
+            <Body>
+                <div>
+                    <Articles/>
+                </div>
+            </Body>
+        </>
+    );
 }
 
 export default App;
