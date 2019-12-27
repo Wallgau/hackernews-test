@@ -120,10 +120,19 @@ h3{
 .top{
 	padding:0;
 	margin:0;
-	min-height: 500px;
+	min-height: 228px;
 	background-image:url("https://wealthsimple-grow.ghost.io/content/images/2019/12/MsEtiquette-1-2.jpg");
 	background-size: cover;
 	background-position:center;
+}
+.textTop{
+	line-height: 28px;
+    padding: 30px 30px 15px;
+		p{
+			font-family: FuturaBT-Book,sans-serif;
+    
+    font-weight: 300;
+		}
 }
 `;
 export const Article = styled.div `
