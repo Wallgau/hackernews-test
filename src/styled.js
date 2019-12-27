@@ -104,16 +104,17 @@ h3{
 h1{
 	font-family: FuturaBT-Heavy,sans-serif;
     font-size: 45px;
+		font-weight:500;
     color: #272c2f;
     line-height: 1.1;
 }
 h3{
 	font-family: FuturaBT-Heavy,sans-serif;
     font-size: 14px;
-    letter-spacing: 2px;
     opacity: .4;
     text-transform: uppercase;
     line-height: 21px;
+		letter-spacing: 2px;
     margin: 15px 0 0;
 }
 }
@@ -128,9 +129,11 @@ h3{
 .textTop{
 	line-height: 28px;
     padding: 30px 30px 15px;
+		background:white;
 		p{
-			font-family: FuturaBT-Book,sans-serif;
-    
+			font-family: Futura® PT,sans-serif;
+    font-size:18px;
+		line-height:1.6;
     font-weight: 300;
 		}
 }
