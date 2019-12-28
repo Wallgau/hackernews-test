@@ -1,6 +1,101 @@
 import React from "react";
 import styled, {keyframes} from "styled-components";
 
+export const Button = styled.div `
+font-family: FuturaBT-Book,sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    background: #ffb21a;
+    border-radius: 52px;
+    color: #fff;
+    padding: 16px 20px 15px;
+    text-decoration: none;
+    transition: background 80ms linear,opacity 1s linear;
+    white-space: nowrap;
+		width: 30%;
+		margin: 2rem auto;
+		text-align:center;
+`
+
+export const FooterStyled = styled.footer `
+    background: #222;
+    margin-left: auto;
+    margin-right: auto;
+    /* max-width: 1490px; */
+    padding: 3rem 1.3rem;
+
+ul, li{
+			list-style: none;
+    margin: 0;
+    padding: 0;
+		}
+		.footer-content {
+    color: #fff;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+.footer-list-wrapper {
+    margin: 0 0 50px;
+}
+ul.footer-list li:first-child {
+    font-family: FuturaBT-Heavy,sans-serif;
+    font-size: 14px;
+		font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+}
+		ul.footer-list {
+    text-align: left;
+    vertical-align: top;
+}
+ul.footer-list li {
+    font-family: FuturaBT-Book,sans-serif;
+    
+    margin-bottom: 10px;
+}
+.footer-link {
+    color: #fff;
+    opacity: 1;
+		font-weight: 100;
+    text-decoration: none;
+    transition: opacity 60ms linear;
+		letter-spacing:1.4px;
+}
+.app-icon-ios a {
+    background: url(/assets/magazine/images/modules/icon-apple-340ef8d….svg) no-repeat;
+}
+strong, strong a{
+  font-family: FuturaBT-Heavy,sans-serif;
+    font-size: inherit;
+    font-weight: 100;
+    font-size: 13px;
+    line-height: 1.77;
+    color: #fff;
+    margin: 0 auto;
+    max-width: 1200px;
+    opacity: .3;
+    padding: 10px 0;
+}
+strong a{
+  margin: 0 4px;
+}
+.icons-dowload{
+  display: flex;
+}
+.icons-dowload a{
+  color:white;
+  margin-right: 1rem;
+}
+.footer-ws-for-links{
+  display:flex;
+  flex-direction: column;
+}
+.footer-ws-for-links a{
+  margin-bottom: 2rem;
+}
+`
+
 export const Header = styled.div `
 
 @media (max-width: 620px) {
@@ -20,7 +115,6 @@ export const Header = styled.div `
 	
 	
   .w {
-    border: 1px solid black;
 		background:black
     border-radius: 50%;
 		padding:0.3rem
@@ -33,7 +127,6 @@ export const Header = styled.div `
 		margin-left:1.5rem;
   }
 	.hamburger{
-		border: 1px solid #fab131;
 		background-color: #fab131;
 		border-radius: 50%;
 		color: white;
@@ -152,10 +245,9 @@ export const Article = styled.div `
   margin: ${
     props => props.eachArticle ? "0 2rem" : "0"
 };
-		border: 1px solid blue;}
+		}
 		
 	& > div > div{
-		border: 1px solid red;
 		margin-bottom: 2rem
 		background:white;
 	}

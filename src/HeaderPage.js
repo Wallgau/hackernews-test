@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
 import MenuRoundedIcon from "@material-ui/icons/MenuRounded";
 import CloseIcon from "@material-ui/icons/Close";
-import {Header, Article} from "./styled.js";
+import {Header, Article} from "./styled";
 
 function HeaderPage() {
     const [open, setOpen] = useState(false);

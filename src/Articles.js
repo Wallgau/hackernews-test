@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react";
 import axios from "axios";
 import urlMetadata from "url-metadata";
-import {Img, Article} from "./styled";
+import {Img, Article, Button} from "./styled";
 
 function Articles() {
     const baseUrl = "https://hacker-news.firebaseio.com/v0";
@@ -72,11 +72,11 @@ function Articles() {
                     ))
                 } </div>
             </Article>
-            <button onClick={
+            <Button onClick={
                 () => {
                     axios.get(`${baseUrl}/topstories.json`).then(res => getArticleData(res.data, 30));
                 }
-            }>see more</button>
+            }>More Posts</Button>
         </>
     );
 }
