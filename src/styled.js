@@ -94,6 +94,15 @@ strong a{
 .footer-ws-for-links a{
   margin-bottom: 2rem;
 }
+ul.footer-list li.footer-social-icon {
+    display: inline-block;
+    font-size: 30px;
+    margin: 0 15px 0 0;
+}
+ .country {
+    display: inline-block;
+    margin: 0 10px 0 0;
+}
 `
 
 export const Header = styled.div `
