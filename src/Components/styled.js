@@ -247,12 +247,17 @@ export const Article = styled.div `
     width: 92%;
     background: #f9f8f6;
 		}
-.post{background: #fff;
+    ul{
+    text-decoration: none;
+    list-style-type: none;
+    padding: 0;
+    }
+li{background: #fff;
     line-height: 28px;
     padding: 30px 30px 15px;
  
   margin: ${
-    props => props.eachArticle ? "0 2rem" : "0"
+    props => props.eachArticle ? "0 2rem" : "1rem"
 };
 		}
 		
@@ -274,6 +279,17 @@ span{
     line-height: 32px;
     margin: 10px 0 20px;
 	}
-	
+	@media (min-width: 621px){
+    ul{
+    display:flex;
+    flex-wrap:wrap;
+    }
+    height:fit-content}
+    li {
+      width:36%
+    }
+    
+    
+  }
 
 `;

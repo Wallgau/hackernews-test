@@ -1,9 +1,9 @@
 import React from "react";
-import Articles from "./Articles";
-import HeaderPage from "./HeaderPage";
-import Top from "./Top";
-import Footer from "./Footer";
-import {Body} from "./styled";
+import Articles from "./Components/Articles";
+import HeaderPage from "./Components/HeaderPage";
+import Top from "./Components/Top";
+import Footer from "./Components/Footer";
+import {Body} from "./Components/styled";
 import "./App.css"
 
 function App() {

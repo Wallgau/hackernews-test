@@ -11,6 +11,7 @@ function Articles() {
         mode: "no-cors"
     };
     const [templateArray, setTemplateArray] = useState([]);
+    const [start, setStart] = useState(0)
     console.log(templateArray)
     const getArticleData = (articleIds, start) => {
         let template = [];
@@ -41,6 +42,12 @@ function Articles() {
         axios.get(`${baseUrl}/topstories.json`).then(res => getArticleData(res.data, 0));
     }, []);
 
+    useEffect(() => {
+        axios.get(`${baseUrl}/topstories.json`).then(res => getArticleData(res.data, start));
+
+    }, [start])
+
+
     return (
         <>
 
@@ -49,32 +56,35 @@ function Articles() {
             </div>
             <Article>
 
-                <div> {
-                    templateArray && templateArray.slice(0, 30).map(articleItem => articleItem.imageUrl && (
-                        <div eachArticle>
-                            <Img src={
-                                    articleItem.imageUrl || "How to"
-                                }
-                                alt="article's image"/>
-                            <div className="post">
+                <ul> {
+                    templateArray && templateArray.slice(0, start + 15).map(articleItem => articleItem.imageUrl && (
+                        <li eachArticle>
+                            <a>
 
-                                <span>{
-                                    articleItem.siteName
-                                }</span>
-                                <h3> {
-                                    articleItem.title
-                                }</h3>
-                                <p></p>
-                            </div>
+                                <Img src={
+                                        articleItem.imageUrl || "How to"
+                                    }
+                                    alt="article's image"/>
+                                <div className="post">
+
+                                    <span>{
+                                        articleItem.siteName
+                                    }</span>
+                                    <h3> {
+                                        articleItem.title
+                                    }</h3>
+                                    <p>L’objectif d’un paragraphe est de soutenir une affirmation, ou une idée, qui contribue à établir la thèse globale ou l’intention du mémoire. Chaque paragraphe devrait se concentrer sur ce point ou cette idée unique, et être clairement relié à ce qui le précède.</p>
+                                </div>
+                            </a>
 
 
-                        </div>
+                        </li>
                     ))
-                } </div>
+                } </ul>
             </Article>
             <Button onClick={
                 () => {
-                    axios.get(`${baseUrl}/topstories.json`).then(res => getArticleData(res.data, 30));
+                    setStart(start + 30)
                 }
             }>More Posts</Button>
         </>
