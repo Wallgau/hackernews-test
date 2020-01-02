@@ -306,13 +306,21 @@ span{
       width: calc(50% - 1rem);
       padding:0;
     } 
-    li:nth-of-type(odd){
-      margin:0 1rem 2rem 0;
-
+    li:first-child{
+      height: 48rem;
+    margin: 0 1rem 2rem 0;
+    }
+    li:nth-of-type(2n+3){
+      margin:-2rem
+       1rem 2rem 0;
+      height: 50rem;
     }
     li:nth-of-type(even){
       margin:0 0 2rem 1rem;
+      height:50rem;
+      background:red;
     }
+    
   }
 
 `;
