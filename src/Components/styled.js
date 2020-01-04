@@ -15,6 +15,10 @@ font-family: FuturaBT-Book,sans-serif;
 		width: 30%;
 		margin: 2rem auto;
 		text-align:center;
+    @media (min-width:1024px){
+      width:20%;
+      font-size:20px
+    }
 `
 
 export const FooterStyled = styled.footer `
@@ -107,6 +111,9 @@ ul.footer-list li.footer-social-icon {
 export const Header = styled.div `
 
 @media (max-width: 620px) {
+  & > div.desktop-menu{
+    display:none;
+  }
 	& > div{
 		background: white;
     width: 100%;
@@ -145,11 +152,45 @@ export const Header = styled.div `
 	}
 	}
   @media (min-width: 621px) {
+    div.desktop-menu{
+    display:flex;
+    background:red;
+  }
+    ul.row{
+    list-style: none;
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    }
+    .header-logo {
+    flex-grow: 10;
+    font-size:18px;
+}
     .w, .hamburger{
       display: none;
     }
+  
+     .textTop{ margin: 2.5rem;
+    position: absolute;
+    top: 24rem;
+    right: -8px;
+    width: 56%;
+    opacity: 0.7;
+    height: 22rem;}
+    
+.top {
+    padding: 13rem;
+    margin: 2.5rem;
+}
+svg{
+  width: 160px;
+}.row-align-right {
+    justify-content: flex-end;
+}
     
   }
+  
 
 `;
 
@@ -178,9 +219,17 @@ margin: 0 2rem;
 export const Img = styled.img `
   width: 100%;
   margin: 0 auto;
-	heigt: 5rem;
+	height: 20rem;
+  opacity:0.8;
 `;
 export const Wrap = styled.div `
+.row-align-center {
+   display:none
+}
+
+.row {
+    display: none;
+}
 margin:0 -8px;
 span{
 	font-family: FuturaBT-Heavy,sans-serif;
@@ -238,23 +287,89 @@ h3{
 		}
 }
 @media (min-width: 621px) {
+  a{
+    color:black
+    font-family: FuturaBT-Book,sans-serif;
+    font-weight: 300;
+    font-size: 1.1rem;
+    opacity: 0.4;
+  }
+  a:hover{
+    opacity:1;
+  }
     .magazine{
       padding:2.5rem;
     }
     .top{
-      padding:7rem;
-      margin:2.5rem
+      padding:12rem;
+      margin:2.5rem;
+      position:relative;
     }
     .textTop{
-          margin: 2.5rem;
+    margin: 2.5rem;
+    margin-right:0;
     position: absolute;
-    top: 14rem;
-    right: -8px;
-    width: 66%;
+    top: 10%;
+    right:0
+    width: 55%;
     opacity: 0.7;
     height: 19rem;
     }
+    .row-align-center {
+    justify-content: center;
+}
+
+.row {
+    display: flex;
+}
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
     
+  }
+.sub-nav-link {
+    align-self: center;
+    margin: 0 20px;
+    position: relative;
+    text-align: center;
+}
+.sub-nav-link a {
+    text-decoration: none;
+}
+.magazine-hero .sub-nav-link a {
+    color: #272c2f;
+    }
+.magazine-hero .sub-nav-link .active {
+    opacity: 1;
+}
+.sub-nav-link:after {
+    background: #121212;
+    border-radius: 100%;
+    content: "";
+    display: block;
+    height: 2px;
+    position: absolute;
+    right: -20px;
+    top: 50%;
+    width: 2px;
+}
+.magazine-hero .sub-nav-link:after {
+    opacity: .4;
+}
+.magazine h1{
+  margin-top:0;
+  font-size:4rem;
+  margin-bottom: 1.3rem;
+}
+.magazine h3{
+  margin-top:0;
+  }
+}
+@media (min-width:900px) {
+    .top{
+      margin: 2.5rem 8rem;
+    }
   }
 `;
 export const Article = styled.div `
@@ -272,6 +387,7 @@ export const Article = styled.div `
 li{background: #fff;
     line-height: 28px;
     padding: 30px 30px 15px;
+
  
   margin: ${
     props => props.eachArticle ? "0 2rem" : "1rem"
@@ -300,27 +416,53 @@ span{
     ul{
     display:flex;
     flex-wrap:wrap;
+    height:fit-content
     }
-    height:fit-content}
     li {
-      width: calc(50% - 1rem);
+      width: calc(50% - 0.5rem);
       padding:0;
     } 
     li:first-child{
-      height: 48rem;
-    margin: 0 1rem 2rem 0;
+      height: 44rem;
+    margin: 0 0.5rem 1rem 0;
+        
+    }
+    li:first-child .post{
+      padding-bottom: 0;
     }
     li:nth-of-type(2n+3){
-      margin:-2rem
-       1rem 2rem 0;
-      height: 50rem;
+      margin:-1rem
+       0.5rem 1rem 0;
+      height: 45rem;
     }
     li:nth-of-type(even){
-      margin:0 0 2rem 1rem;
-      height:50rem;
-      background:red;
+      margin:0 0 1rem 0.5rem;
+      height:45rem;
+    }
+    .post{
+      font-family: FuturaBT-Book,sans-serif;
+      background: #fff;
+    clear: both;
+    line-height: 28px;
+    padding: 30px 30px 15px;
+    }
+    .post p{
+      font-family: FuturaBT-Book,sans-serif;
+    }
+    .post h3{
+      font-family: FuturaBT-Heavy,sans-serif;
+    font-size: inherit;
+    font-size: 24px;
+    line-height: 32px;
+    margin: 10px 0 20px;
     }
     
   }
+  @media (min-width:900px) {
+    ul{
+      margin: 2.5rem 5.5rem;
+    }
+  }
+  
 
 `;
