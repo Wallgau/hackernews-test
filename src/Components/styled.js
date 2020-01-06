@@ -134,10 +134,10 @@ ul.footer-list li.footer-social-icon {
 export const Header = styled.div `
 
 @media (max-width: 620px) {
-  & > div.desktop-menu{
+& > div.desktop-menu{
     display:none;
   }
-	& > div{
+& > div{
 		background: white;
     width: 100%;
     z-index: 15;
@@ -149,7 +149,7 @@ export const Header = styled.div `
     display: flex;
     justify-content: space-between;
 	}
-  .w {
+.w {
 		background:black
     border-radius: 50%;
 		padding:0.3rem
@@ -161,7 +161,7 @@ export const Header = styled.div `
     color: white;	
 		margin-left:1.5rem;
   }
-	.hamburger{
+.hamburger{
 		background-color: #fab131;
 		border-radius: 50%;
 		color: white;
@@ -174,11 +174,26 @@ export const Header = styled.div `
 		
 	}
 	}
-  @media (min-width: 621px) {
-    div.desktop-menu{
+@media (min-width: 621px) { 
+    background:white
+    padding: 0rem;
+    width:100%;
+.desktop-menu{
     display:flex;
-    background:red;
-  }
+    padding: 1rem 0;
+    background: white;
+    width: 100%;
+    position: fixed;
+    z-index: 50;
+}
+.header-logo{
+  padding-left:8rem;
+  flex-grow: 10;
+  font-size:18px;
+}
+.desktop-menu nav{
+  padding-right:8rem
+}
     ul.row{
     list-style: none;
     display: flex;
@@ -186,10 +201,31 @@ export const Header = styled.div `
     margin: 0;
     padding: 0;
     }
-    .header-logo {
-    flex-grow: 10;
-    font-size:18px;
-}
+.cta.cta--www-init-onboarding.header-nav-link.button{
+    font-family: FuturaBT-Book,sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    background: #ffb21a;
+    border-radius: 52px;
+    color: #fff;
+    padding: 16px 20px 15px;
+    text-decoration: none;
+    transition: background 80ms linear,opacity 1s linear;
+    white-space: nowrap;
+  }
+  ul.row li:focus{
+    border:1px solid red;
+  }
+    ul.row li a{
+      text-decoration: none;
+      color: hsla(0,0%,7%,.5);
+      margin-left: 1.3rem;
+      font-family: FuturaBT-Book,sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    }
+    
+   
     .w, .hamburger{
       display: none;
     }
@@ -211,8 +247,9 @@ svg{
 }.row-align-right {
     justify-content: flex-end;
 }
-    
-  }
+
+}
+
   
 
 `;
@@ -227,7 +264,7 @@ margin: 0 2rem;
 @media (min-width: 1400px){
   margin: 0 auto;
 }
-
+font-family: FuturaBT-Book,sans-serif;
 & > div{
  background: #f9f8f6;
 	
@@ -400,10 +437,21 @@ ul {
     .top{
       margin: 2.5rem 8rem;
     }
+.magazine {
+    padding-top: 6.5rem;
+    }
+    
+  
   }
   
 `;
 export const Article = styled.div `
+.post p{
+    font-family: FuturaBT-Book,sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    font-weight: 300;
+    }
 .ggvysP{
 	margin: 0 auto;
     max-width: 1260px;
@@ -477,9 +525,7 @@ span{
     line-height: 28px;
     padding: 30px 30px 15px;
     }
-    .post p{
-      font-family: FuturaBT-Book,sans-serif;
-    }
+    
     .post h3{
       font-family: FuturaBT-Heavy,sans-serif;
     font-size: inherit;
@@ -496,9 +542,6 @@ span{
     }
     @media (min-width:1300px){
 
-      ul{
-        margin-left:0
-      }
     li:first-child {
     height: 44rem;
     margin: 0 1rem 1rem 0;

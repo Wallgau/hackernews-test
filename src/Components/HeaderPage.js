@@ -32,18 +32,6 @@ function HeaderPage() {
                     </ul>
                 </nav>
 
-                <nav class="sub-nav">
-                    <select class="sub-nav-select" onchange="location = this.value;">
-                        <option value="/magazine">Magazine</option>
-                        <option value="/magazine/category/money-diaries">Money Diaries</option>
-                        <option value="/magazine/category/how-to">How To</option>
-                        <option value="/magazine/category/news">News</option>
-                        <option value="/magazine/category/data">Data</option>
-                        <option value="/magazine/category/ask-wealthsimple">Ask Wealthsimple</option>
-                        <option value="/magazine/category/dear-ms-etiquette">Dear Ms. Etiquette</option>
-                    </select>
-                </nav>
-
                 <a class="main-nav-hamburger hamburger-icon hide-md" data-hamburger-action="open">
                     <div class="hamburger-icon-lines">
                         <div class="hamburger-icon-line"></div>
