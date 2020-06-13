@@ -47,8 +47,9 @@ const Articles = () => {
                         articleItem.title
                     }</h2>
                     <img src={
-                        articleItem.image
-                    }/>
+                            articleItem.image
+                        }
+                        alt=""/>
                 </div>
             ))
         } </div>

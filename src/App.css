@@ -1,5 +1,37 @@
 body {
-    margin : 0 auto;
-    background : #f9f8f6;
-
+  margin: 0 auto;
+  background: #f9f8f6;
+}
+.mobileMenu {
+  background: black;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  z-index: 99;
+  opacity: 0.9;
+  width: 100%;
+}
+.mobileMenu ul {
+  padding: 2rem 0;
+}
+.mobileMenu ul li a {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  padding: 1.5rem;
+  font-size: 1.8rem;
+  text-align: center;
+}
+.mobileMenu ul li:hover {
+  border-bottom: 1px solid white;
+  border-top: 1px solid white;
+  opacity: 1;
+}
+.mobileMenu ul li a:hover {
+  font-size: 2.2rem;
+  background: lightgrey;
+  color: black;
+  opacity: 1;
 }

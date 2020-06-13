@@ -1,28 +1,29 @@
-import React from "react";
-import styled, {keyframes} from "styled-components";
+import React from 'react';
+import styled, { keyframes } from 'styled-components';
+import CloseIcon from '@material-ui/icons/Close';
 
-export const Button = styled.div `
-font-family: FuturaBT-Book,sans-serif;
-    font-size: 18px;
-    font-weight: 300;
-    background: #ffb21a;
-    border-radius: 52px;
-    color: #fff;
-    padding: 16px 20px 15px;
-    text-decoration: none;
-    transition: background 80ms linear,opacity 1s linear;
-    white-space: nowrap;
-		width: 30%;
-		margin: 2rem auto;
-		text-align:center;
+export const Button = styled.div`
+  font-family: FuturaBT-Book, sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  background: #ffb21a;
+  border-radius: 52px;
+  color: #fff;
+  padding: 16px 20px 15px;
+  text-decoration: none;
+  transition: background 80ms linear, opacity 1s linear;
+  white-space: nowrap;
+  width: 30%;
+  margin: 2rem auto;
+  text-align: center;
 
-@media (min-width:1024px){
-      width:20%;
-      font-size:20px
-    }
-`
+  @media (min-width: 1024px) {
+    width: 20%;
+    font-size: 20px;
+  }
+`;
 
-export const FooterStyled = styled.footer `
+export const FooterStyled = styled.footer`
     background: #222;
     margin-left: auto;
     margin-right: auto;
@@ -128,9 +129,9 @@ ul.footer-list li.footer-social-icon {
 }
   padding: 3rem 6rem;
 }
-`
+`;
 
-export const Header = styled.div `
+export const Header = styled.div`
 
 ul.row li a:hover,ul.row li a:visited,ul.row li a:focus .cta.cta--www-init-onboarding.header-nav-link.button{
   color: #121212;
@@ -257,49 +258,58 @@ svg{
 }.row-align-right {
     justify-content: flex-end;
   }
-}
-
-  
-
+}  
 `;
 
-export const Body = styled.div `
-h1:hover, h3:hover{
-  text-decoration:underline;
-}
-@media (max-width:900px){
-  margin: 0 2rem;
-  max-width: 1260px;
-  background: #f9f8f6;
-}
-@media (min-width: 1400px){
-  margin: 0 auto;
-}
-font-family: FuturaBT-Book,sans-serif;
-
-& > div{
- background: #f9f8f6;	
-	nav{
-		bottom: 0;
-    right: -100%;
-    top: 0;
-    width: 100%;
-    z-index: 200;
-		background:#fab131;	
-    height: 100vh;
-    transform: translateX(0%,0%);
-	  transition: all 0.8s ease-in-out;
-	}
-}
+export const CloseMenu = styled(CloseIcon)`
+  color: white;
+  padding: 1rem;
+  svg {
+    height: 3rem;
+    width: 3rem;
+  }
+  position: absolute;
+  right: 0;
 `;
 
-export const Img = styled.img `
+export const Body = styled.div`
+  h1:hover,
+  h3:hover {
+    text-decoration: underline;
+  }
+  @media (max-width: 900px) {
+    margin: 0 2rem;
+    max-width: 1260px;
+    background: #f9f8f6;
+  }
+  @media (min-width: 1400px) {
+    margin: 0 auto;
+  }
+  font-family: FuturaBT-Book, sans-serif;
+
+  & > div {
+    background: #f9f8f6;
+    nav {
+      bottom: 0;
+      right: -100%;
+      top: 0;
+      width: 100%;
+      z-index: 200;
+      background: #fab131;
+      height: 100vh;
+      transform: translateX(0%, 0%);
+      transition: all 0.8s ease-in-out;
+    }
+  }
+`;
+
+export const Img = styled.img`
   width: 100%;
   margin: 0 auto;
-	height: 20rem;
-  opacity:0.8;
+  height: 20rem;
+  opacity: 0.8;
 `;
-export const Wrap = styled.div `
+export const Wrap = styled.div`
 .textTop h1:hover, .textTop h3:hover{
   text-decoration:underline;
 }
@@ -458,7 +468,7 @@ ul {
   }
   
 `;
-export const Article = styled.div `
+export const Article = styled.div`
 h1:hover, .textTop h3:hover{
   text-decoration:underline;
 }
@@ -484,9 +494,7 @@ li{background: #fff;
     padding: 30px 30px 15px;
 
  
-  margin: ${
-    props => props.eachArticle ? "0 2rem" : "1rem"
-};
+  margin: ${props => (props.eachArticle ? '0 2rem' : '1rem')};
 		}
 		
 	& > div > div{
